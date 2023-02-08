@@ -1,0 +1,23 @@
+spring:
+  security:
+    ignored: "/actuator/**"
+
+server:
+  port: 9000
+
+keycloak:
+  jwk: https://sso-corproot-v2.scapp-services.swisscom.com/token_keys
+
+logging:
+  level:
+    org:
+      springframework:
+        security: DEBUG
+      zalando:
+        logbook: DEBUG
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
